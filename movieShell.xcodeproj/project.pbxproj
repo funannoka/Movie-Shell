@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		AA7BF31824B6F8140047253C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF31724B6F8140047253C /* AppDelegate.swift */; };
 		AA7BF31A24B6F8140047253C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF31924B6F8140047253C /* SceneDelegate.swift */; };
-		AA7BF31C24B6F8140047253C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF31B24B6F8140047253C /* FirstViewController.swift */; };
-		AA7BF31E24B6F8140047253C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF31D24B6F8140047253C /* SecondViewController.swift */; };
 		AA7BF32124B6F8140047253C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7BF31F24B6F8140047253C /* Main.storyboard */; };
 		AA7BF32324B6F8170047253C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA7BF32224B6F8170047253C /* Assets.xcassets */; };
 		AA7BF32624B6F8170047253C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7BF32424B6F8170047253C /* LaunchScreen.storyboard */; };
+		AA7BF33224B70FD40047253C /* SearchScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF33124B70FD40047253C /* SearchScreenController.swift */; };
+		AA7BF33424B7102A0047253C /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF33324B7102A0047253C /* HomeScreenController.swift */; };
+		AA7BF33824B80B090047253C /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF33724B80B090047253C /* MediaCell.swift */; };
+		AA7BF33A24B80D070047253C /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF33924B80D070047253C /* Media.swift */; };
+		AA7BF34024B888D00047253C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA7BF33F24B888D00047253C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA7BF31424B6F8140047253C /* movieShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7BF31724B6F8140047253C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA7BF31924B6F8140047253C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA7BF31B24B6F8140047253C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		AA7BF31D24B6F8140047253C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AA7BF32024B6F8140047253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA7BF32224B6F8170047253C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA7BF32524B6F8170047253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA7BF32724B6F8170047253C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA7BF33124B70FD40047253C /* SearchScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenController.swift; sourceTree = "<group>"; };
+		AA7BF33324B7102A0047253C /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
+		AA7BF33724B80B090047253C /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
+		AA7BF33924B80D070047253C /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		AA7BF33F24B888D00047253C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,7 @@
 		AA7BF30B24B6F8140047253C = {
 			isa = PBXGroup;
 			children = (
+				AA7BF33F24B888D00047253C /* README.md */,
 				AA7BF31624B6F8140047253C /* movieShell */,
 				AA7BF31524B6F8140047253C /* Products */,
 			);
@@ -60,8 +67,10 @@
 			children = (
 				AA7BF31724B6F8140047253C /* AppDelegate.swift */,
 				AA7BF31924B6F8140047253C /* SceneDelegate.swift */,
-				AA7BF31B24B6F8140047253C /* FirstViewController.swift */,
-				AA7BF31D24B6F8140047253C /* SecondViewController.swift */,
+				AA7BF33124B70FD40047253C /* SearchScreenController.swift */,
+				AA7BF33324B7102A0047253C /* HomeScreenController.swift */,
+				AA7BF33724B80B090047253C /* MediaCell.swift */,
+				AA7BF33924B80D070047253C /* Media.swift */,
 				AA7BF31F24B6F8140047253C /* Main.storyboard */,
 				AA7BF32224B6F8170047253C /* Assets.xcassets */,
 				AA7BF32424B6F8170047253C /* LaunchScreen.storyboard */,
@@ -131,6 +140,7 @@
 				AA7BF32624B6F8170047253C /* LaunchScreen.storyboard in Resources */,
 				AA7BF32324B6F8170047253C /* Assets.xcassets in Resources */,
 				AA7BF32124B6F8140047253C /* Main.storyboard in Resources */,
+				AA7BF34024B888D00047253C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA7BF31E24B6F8140047253C /* SecondViewController.swift in Sources */,
-				AA7BF31C24B6F8140047253C /* FirstViewController.swift in Sources */,
+				AA7BF33224B70FD40047253C /* SearchScreenController.swift in Sources */,
 				AA7BF31824B6F8140047253C /* AppDelegate.swift in Sources */,
+				AA7BF33A24B80D070047253C /* Media.swift in Sources */,
+				AA7BF33824B80B090047253C /* MediaCell.swift in Sources */,
+				AA7BF33424B7102A0047253C /* HomeScreenController.swift in Sources */,
 				AA7BF31A24B6F8140047253C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
