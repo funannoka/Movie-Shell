@@ -6,7 +6,7 @@
 ![alt text](media/shot2.png)
 ![alt text](media/shot3.png)
 ![alt text](media/shot4.png)
-![alt text](media/FirstImplementation.mov)
+![alt text](media/FirstImplementation.gif)
 
 
 ## My Goal
