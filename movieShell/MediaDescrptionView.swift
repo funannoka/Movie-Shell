@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import Firebase
 
 class MediaDescriptionView: UIViewController , UIGestureRecognizerDelegate{
    

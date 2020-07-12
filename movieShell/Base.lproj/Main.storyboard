@@ -185,9 +185,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IWp-a6-m7c" userLabel="Video Player View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWp-a6-m7c" userLabel="Video Player View">
                                 <rect key="frame" x="0.0" y="44" width="414" height="284"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKs-pM-nDP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="284"/>
@@ -204,33 +203,39 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7N-sh-4be" userLabel="Video Description View">
-                                <rect key="frame" x="10" y="436" width="384" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z8r-cf-V6e" userLabel="Movie Description">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="184"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-Xs-oqh" userLabel="Title View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-Xs-oqh" userLabel="Title View">
                                 <rect key="frame" x="10" y="350" width="384" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAk-r7-9mc">
-                                        <rect key="frame" x="0.0" y="0.0" width="239" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="rAk-r7-9mc">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="52"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="rAk-r7-9mc" firstAttribute="leading" secondItem="uXG-Xs-oqh" secondAttribute="leading" id="7qO-lM-RBj"/>
+                                    <constraint firstAttribute="bottom" secondItem="rAk-r7-9mc" secondAttribute="bottom" id="Rpg-8c-KMG"/>
+                                    <constraint firstItem="rAk-r7-9mc" firstAttribute="top" secondItem="uXG-Xs-oqh" secondAttribute="top" id="qR2-cQ-Zjf"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rAk-r7-9mc" secondAttribute="trailing" constant="20" symbolic="YES" id="waZ-db-mfE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7N-sh-4be" userLabel="Video Description View">
+                                <rect key="frame" x="10" y="412" width="384" height="231"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXq-ai-mck" userLabel="Movie Description">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="223"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -239,6 +244,20 @@
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" button="YES"/>
                         </accessibility>
+                        <constraints>
+                            <constraint firstItem="IWp-a6-m7c" firstAttribute="top" secondItem="bmP-pQ-xGG" secondAttribute="top" constant="44" id="63q-x1-u51"/>
+                            <constraint firstItem="uXG-Xs-oqh" firstAttribute="trailing" secondItem="PG1-K1-Tah" secondAttribute="trailingMargin" id="88j-8B-Eue"/>
+                            <constraint firstAttribute="bottom" secondItem="uXG-Xs-oqh" secondAttribute="bottom" constant="314" id="OIU-4T-rar"/>
+                            <constraint firstItem="IWp-a6-m7c" firstAttribute="leading" secondItem="PG1-K1-Tah" secondAttribute="leading" id="P0a-hk-EZV"/>
+                            <constraint firstItem="bmP-pQ-xGG" firstAttribute="bottom" secondItem="G7N-sh-4be" secondAttribute="bottom" constant="24" id="POj-76-PKV"/>
+                            <constraint firstItem="uXG-Xs-oqh" firstAttribute="leading" secondItem="bmP-pQ-xGG" secondAttribute="leading" constant="10" id="PUp-fw-f16"/>
+                            <constraint firstAttribute="trailing" secondItem="IWp-a6-m7c" secondAttribute="trailing" id="WEq-Ct-BuV"/>
+                            <constraint firstItem="uXG-Xs-oqh" firstAttribute="trailing" secondItem="G7N-sh-4be" secondAttribute="trailing" id="YSc-FK-PWd"/>
+                            <constraint firstItem="uXG-Xs-oqh" firstAttribute="leading" secondItem="G7N-sh-4be" secondAttribute="leading" id="Yl4-lB-kPg"/>
+                            <constraint firstItem="G7N-sh-4be" firstAttribute="top" secondItem="uXG-Xs-oqh" secondAttribute="bottom" constant="10" id="fla-Rg-TCk"/>
+                            <constraint firstItem="uXG-Xs-oqh" firstAttribute="top" secondItem="IWp-a6-m7c" secondAttribute="bottom" constant="22" id="s6h-jX-6dQ"/>
+                            <constraint firstItem="uXG-Xs-oqh" firstAttribute="top" secondItem="PG1-K1-Tah" secondAttribute="top" constant="350" id="tfg-BO-w41"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bmP-pQ-xGG"/>
                     </view>
                     <toolbarItems/>
@@ -246,7 +265,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="coverImage" destination="dKs-pM-nDP" id="w9y-Wt-vpZ"/>
-                        <outlet property="descriptionText" destination="z8r-cf-V6e" id="ivH-pY-2uV"/>
+                        <outlet property="descriptionText" destination="AXq-ai-mck" id="lp3-hW-nhR"/>
                         <outlet property="playButton" destination="BA1-bB-SwX" id="1jS-WE-DvR"/>
                         <outlet property="titleLabel" destination="rAk-r7-9mc" id="fLE-cc-Ibe"/>
                     </connections>

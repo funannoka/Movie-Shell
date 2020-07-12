@@ -26,7 +26,7 @@ class MediaCell: UITableViewCell {
     
     func getVideo() -> Video {
         
-        let video = Video(image: videoImageView.image ?? UIImage(), title: videoTitleLabel.text ?? "", desc: desc ?? "")
+        let video = Video(image: videoImageView.image ?? UIImage(), title: videoTitleLabel.text ?? "", desc: desc )
         
         
         return video

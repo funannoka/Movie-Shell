@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D3C8FCA827455BA620CCE0A /* Pods_movieShell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09E4A6BA1EB47ABB109465A /* Pods_movieShell.framework */; };
 		AA423BCE24BAF862004367B3 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BBF24BAF861004367B3 /* 2.mp4 */; };
 		AA423BCF24BAF862004367B3 /* 15.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BC024BAF861004367B3 /* 15.mp4 */; };
 		AA423BD024BAF862004367B3 /* 10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BC124BAF861004367B3 /* 10.mp4 */; };
@@ -22,6 +23,7 @@
 		AA423BDA24BAF862004367B3 /* 7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BCB24BAF861004367B3 /* 7.mp4 */; };
 		AA423BDB24BAF862004367B3 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BCC24BAF861004367B3 /* 1.mp4 */; };
 		AA423BDC24BAF862004367B3 /* 14.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BCD24BAF861004367B3 /* 14.mp4 */; };
+		AA423BDE24BB2031004367B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA423BDD24BB2031004367B3 /* GoogleService-Info.plist */; };
 		AA7BF31824B6F8140047253C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF31724B6F8140047253C /* AppDelegate.swift */; };
 		AA7BF31A24B6F8140047253C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF31924B6F8140047253C /* SceneDelegate.swift */; };
 		AA7BF32124B6F8140047253C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7BF31F24B6F8140047253C /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		968FA2F0CB356CACA399F772 /* Pods-movieShell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieShell.debug.xcconfig"; path = "Target Support Files/Pods-movieShell/Pods-movieShell.debug.xcconfig"; sourceTree = "<group>"; };
+		A09E4A6BA1EB47ABB109465A /* Pods_movieShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA423BBF24BAF861004367B3 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 2.mp4; path = ../videos/2.mp4; sourceTree = "<group>"; };
 		AA423BC024BAF861004367B3 /* 15.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 15.mp4; path = ../videos/15.mp4; sourceTree = "<group>"; };
 		AA423BC124BAF861004367B3 /* 10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 10.mp4; path = ../videos/10.mp4; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 		AA423BCB24BAF861004367B3 /* 7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 7.mp4; path = ../videos/7.mp4; sourceTree = "<group>"; };
 		AA423BCC24BAF861004367B3 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 1.mp4; path = ../videos/1.mp4; sourceTree = "<group>"; };
 		AA423BCD24BAF861004367B3 /* 14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 14.mp4; path = ../videos/14.mp4; sourceTree = "<group>"; };
+		AA423BDD24BB2031004367B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA7BF31424B6F8140047253C /* movieShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7BF31724B6F8140047253C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA7BF31924B6F8140047253C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 		AA7BF33F24B888D00047253C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDescrptionView.swift; sourceTree = "<group>"; };
 		AA7BF34724B9D9E10047253C /* MediaFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFooterView.swift; sourceTree = "<group>"; };
+		E444B3E54A1DB60830F49A8D /* Pods-movieShell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieShell.release.xcconfig"; path = "Target Support Files/Pods-movieShell/Pods-movieShell.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +79,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3C8FCA827455BA620CCE0A /* Pods_movieShell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1A83BD1E8891E5A9B42140 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				968FA2F0CB356CACA399F772 /* Pods-movieShell.debug.xcconfig */,
+				E444B3E54A1DB60830F49A8D /* Pods-movieShell.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AA7BF30B24B6F8140047253C = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +117,8 @@
 				AA7BF33F24B888D00047253C /* README.md */,
 				AA7BF31624B6F8140047253C /* movieShell */,
 				AA7BF31524B6F8140047253C /* Products */,
+				1A1A83BD1E8891E5A9B42140 /* Pods */,
+				ABB1166F37775E93BF122C4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,8 +145,17 @@
 				AA7BF32724B6F8170047253C /* Info.plist */,
 				AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */,
 				AA7BF34724B9D9E10047253C /* MediaFooterView.swift */,
+				AA423BDD24BB2031004367B3 /* GoogleService-Info.plist */,
 			);
 			path = movieShell;
+			sourceTree = "<group>";
+		};
+		ABB1166F37775E93BF122C4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A09E4A6BA1EB47ABB109465A /* Pods_movieShell.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA7BF32A24B6F8170047253C /* Build configuration list for PBXNativeTarget "movieShell" */;
 			buildPhases = (
+				6311441B447E4E4C145B286C /* [CP] Check Pods Manifest.lock */,
 				AA7BF31024B6F8140047253C /* Sources */,
 				AA7BF31124B6F8140047253C /* Frameworks */,
 				AA7BF31224B6F8140047253C /* Resources */,
+				82F0E108543C1483B92631FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,12 +235,55 @@
 				AA423BD824BAF862004367B3 /* 12.mp4 in Resources */,
 				AA423BD924BAF862004367B3 /* 4.mp4 in Resources */,
 				AA423BDA24BAF862004367B3 /* 7.mp4 in Resources */,
+				AA423BDE24BB2031004367B3 /* GoogleService-Info.plist in Resources */,
 				AA423BDB24BAF862004367B3 /* 1.mp4 in Resources */,
 				AA423BDC24BAF862004367B3 /* 14.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6311441B447E4E4C145B286C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-movieShell-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82F0E108543C1483B92631FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movieShell/Pods-movieShell-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movieShell/Pods-movieShell-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-movieShell/Pods-movieShell-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA7BF31024B6F8140047253C /* Sources */ = {
@@ -366,6 +439,7 @@
 		};
 		AA7BF32B24B6F8170047253C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 968FA2F0CB356CACA399F772 /* Pods-movieShell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,6 +458,7 @@
 		};
 		AA7BF32C24B6F8170047253C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E444B3E54A1DB60830F49A8D /* Pods-movieShell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

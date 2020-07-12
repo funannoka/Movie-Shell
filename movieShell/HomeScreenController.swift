@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeScreenController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
