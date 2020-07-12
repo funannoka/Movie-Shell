@@ -3,12 +3,12 @@
 ## Video Streaming Application
 
 ![alt text](media/FirstImplementation.gif)
-![alt text](media/SecondImplementation.gif)
+![alt text](media/ThirdImplementation.gif)
 ![alt text](media/shot1.png)
+![alt text](media/shot5.png)
 ![alt text](media/shot2.png)
 ![alt text](media/shot6.png)
-![alt text](media/shot4.png)
-![alt text](media/shot5.png)
+![alt text](media/shot7.png)
 
 
 ## My Goal
