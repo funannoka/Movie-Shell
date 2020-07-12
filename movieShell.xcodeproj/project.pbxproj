@@ -17,6 +17,9 @@
 		AA7BF33824B80B090047253C /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF33724B80B090047253C /* MediaCell.swift */; };
 		AA7BF33A24B80D070047253C /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF33924B80D070047253C /* Media.swift */; };
 		AA7BF34024B888D00047253C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA7BF33F24B888D00047253C /* README.md */; };
+		AA7BF34224B98CF10047253C /* videos in Resources */ = {isa = PBXBuildFile; fileRef = AA7BF34124B98CF00047253C /* videos */; };
+		AA7BF34424B9B6CF0047253C /* MediaDescrptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */; };
+		AA7BF34824B9D9E10047253C /* MediaFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF34724B9D9E10047253C /* MediaFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		AA7BF33724B80B090047253C /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 		AA7BF33924B80D070047253C /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		AA7BF33F24B888D00047253C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AA7BF34124B98CF00047253C /* videos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = videos; path = ../../../../Downloads/videos; sourceTree = "<group>"; };
+		AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDescrptionView.swift; sourceTree = "<group>"; };
+		AA7BF34724B9D9E10047253C /* MediaFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,16 +71,19 @@
 		AA7BF31624B6F8140047253C /* movieShell */ = {
 			isa = PBXGroup;
 			children = (
+				AA7BF34124B98CF00047253C /* videos */,
 				AA7BF31724B6F8140047253C /* AppDelegate.swift */,
 				AA7BF31924B6F8140047253C /* SceneDelegate.swift */,
-				AA7BF33124B70FD40047253C /* SearchScreenController.swift */,
 				AA7BF33324B7102A0047253C /* HomeScreenController.swift */,
+				AA7BF33124B70FD40047253C /* SearchScreenController.swift */,
 				AA7BF33724B80B090047253C /* MediaCell.swift */,
 				AA7BF33924B80D070047253C /* Media.swift */,
 				AA7BF31F24B6F8140047253C /* Main.storyboard */,
 				AA7BF32224B6F8170047253C /* Assets.xcassets */,
 				AA7BF32424B6F8170047253C /* LaunchScreen.storyboard */,
 				AA7BF32724B6F8170047253C /* Info.plist */,
+				AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */,
+				AA7BF34724B9D9E10047253C /* MediaFooterView.swift */,
 			);
 			path = movieShell;
 			sourceTree = "<group>";
@@ -137,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7BF34224B98CF10047253C /* videos in Resources */,
 				AA7BF32624B6F8170047253C /* LaunchScreen.storyboard in Resources */,
 				AA7BF32324B6F8170047253C /* Assets.xcassets in Resources */,
 				AA7BF32124B6F8140047253C /* Main.storyboard in Resources */,
@@ -151,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7BF34424B9B6CF0047253C /* MediaDescrptionView.swift in Sources */,
 				AA7BF33224B70FD40047253C /* SearchScreenController.swift in Sources */,
+				AA7BF34824B9D9E10047253C /* MediaFooterView.swift in Sources */,
 				AA7BF31824B6F8140047253C /* AppDelegate.swift in Sources */,
 				AA7BF33A24B80D070047253C /* Media.swift in Sources */,
 				AA7BF33824B80B090047253C /* MediaCell.swift in Sources */,

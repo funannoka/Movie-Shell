@@ -67,12 +67,18 @@
                                                                     <state key="normal" title="WATCH THIS">
                                                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="watchThisTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="THd-0c-Fry"/>
+                                                                    </connections>
                                                                 </button>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GU0-6E-Eai">
+                                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GU0-6E-Eai">
                                                                     <rect key="frame" x="14" y="5" width="28" height="30"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <accessibility key="accessibilityConfiguration">
+                                                                <accessibilityTraits key="traits" button="YES" link="YES"/>
+                                                            </accessibility>
                                                             <constraints>
                                                                 <constraint firstItem="nzG-ZG-dOK" firstAttribute="leading" secondItem="L6e-X3-IfZ" secondAttribute="leading" constant="50" id="7LH-cc-Onj"/>
                                                                 <constraint firstItem="ZsP-HA-QWx" firstAttribute="top" secondItem="nzG-ZG-dOK" secondAttribute="bottom" constant="1" id="B6A-2A-aJn"/>
@@ -110,6 +116,7 @@
                                         <connections>
                                             <outlet property="videoImageView" destination="Kwc-8G-VsJ" id="Ap6-3m-ZVS"/>
                                             <outlet property="videoTitleLabel" destination="ZsP-HA-QWx" id="jBL-lY-9ak"/>
+                                            <outlet property="videoTitleView" destination="L6e-X3-IfZ" id="Pt3-iz-We3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -128,6 +135,7 @@
                     <navigationItem key="navigationItem" title="SHELL" id="oFP-QN-6Ay"/>
                     <connections>
                         <outlet property="tableView" destination="Unr-qw-DOK" id="PS4-se-pL1"/>
+                        <segue destination="jxb-Co-bsF" kind="presentation" identifier="toMovieSeque" id="g29-gR-7XJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -168,6 +176,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Movie Description-->
+        <scene sceneID="Wgd-Le-azz">
+            <objects>
+                <viewController id="jxb-Co-bsF" userLabel="Movie Description" customClass="MediaDescriptionView" customModule="movieShell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PG1-K1-Tah">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IWp-a6-m7c" userLabel="Video Player View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKs-pM-nDP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="284"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7N-sh-4be" userLabel="Video Description View">
+                                <rect key="frame" x="10" y="436" width="384" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z8r-cf-V6e" userLabel="Movie Description">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="184"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-Xs-oqh">
+                                <rect key="frame" x="10" y="350" width="384" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAk-r7-9mc">
+                                        <rect key="frame" x="0.0" y="0.0" width="239" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES"/>
+                        </accessibility>
+                        <viewLayoutGuide key="safeArea" id="bmP-pQ-xGG"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Movie Title" id="OX3-OP-jvr" userLabel="Movie Description"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="coverImage" destination="dKs-pM-nDP" id="w9y-Wt-vpZ"/>
+                        <outlet property="descriptionText" destination="z8r-cf-V6e" id="ivH-pY-2uV"/>
+                        <outlet property="titleLabel" destination="rAk-r7-9mc" id="fLE-cc-Ibe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Utm-px-J1K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444.9275362318845" y="-543.75"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
