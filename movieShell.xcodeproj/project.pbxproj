@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3D3C8FCA827455BA620CCE0A /* Pods_movieShell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09E4A6BA1EB47ABB109465A /* Pods_movieShell.framework */; };
+		AA31D95224BBA94E000BC0C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D95124BBA94E000BC0C4 /* LoginViewController.swift */; };
+		AA31D95424BBA96B000BC0C4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D95324BBA96B000BC0C4 /* RegisterViewController.swift */; };
+		AA31D95624BBA9C3000BC0C4 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D95524BBA9C3000BC0C4 /* LandingViewController.swift */; };
 		AA423BCE24BAF862004367B3 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BBF24BAF861004367B3 /* 2.mp4 */; };
 		AA423BCF24BAF862004367B3 /* 15.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BC024BAF861004367B3 /* 15.mp4 */; };
 		AA423BD024BAF862004367B3 /* 10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BC124BAF861004367B3 /* 10.mp4 */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		968FA2F0CB356CACA399F772 /* Pods-movieShell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieShell.debug.xcconfig"; path = "Target Support Files/Pods-movieShell/Pods-movieShell.debug.xcconfig"; sourceTree = "<group>"; };
 		A09E4A6BA1EB47ABB109465A /* Pods_movieShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA31D95124BBA94E000BC0C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AA31D95324BBA96B000BC0C4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AA31D95524BBA9C3000BC0C4 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		AA423BBF24BAF861004367B3 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 2.mp4; path = ../videos/2.mp4; sourceTree = "<group>"; };
 		AA423BC024BAF861004367B3 /* 15.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 15.mp4; path = ../videos/15.mp4; sourceTree = "<group>"; };
 		AA423BC124BAF861004367B3 /* 10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 10.mp4; path = ../videos/10.mp4; sourceTree = "<group>"; };
@@ -92,7 +98,6 @@
 				968FA2F0CB356CACA399F772 /* Pods-movieShell.debug.xcconfig */,
 				E444B3E54A1DB60830F49A8D /* Pods-movieShell.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,6 +151,9 @@
 				AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */,
 				AA7BF34724B9D9E10047253C /* MediaFooterView.swift */,
 				AA423BDD24BB2031004367B3 /* GoogleService-Info.plist */,
+				AA31D95124BBA94E000BC0C4 /* LoginViewController.swift */,
+				AA31D95324BBA96B000BC0C4 /* RegisterViewController.swift */,
+				AA31D95524BBA9C3000BC0C4 /* LandingViewController.swift */,
 			);
 			path = movieShell;
 			sourceTree = "<group>";
@@ -290,6 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA31D95224BBA94E000BC0C4 /* LoginViewController.swift in Sources */,
+				AA31D95424BBA96B000BC0C4 /* RegisterViewController.swift in Sources */,
+				AA31D95624BBA9C3000BC0C4 /* LandingViewController.swift in Sources */,
 				AA7BF34424B9B6CF0047253C /* MediaDescrptionView.swift in Sources */,
 				AA7BF33224B70FD40047253C /* SearchScreenController.swift in Sources */,
 				AA7BF34824B9D9E10047253C /* MediaFooterView.swift in Sources */,

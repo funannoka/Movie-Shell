@@ -18,6 +18,7 @@ class MediaDescriptionView: UIViewController , UIGestureRecognizerDelegate{
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var playButton: UIImageView!
+    @IBOutlet weak var titleBar: UINavigationItem!
     
     var video = Video(image: UIImage(), title: "", desc: "")
 
@@ -25,6 +26,7 @@ class MediaDescriptionView: UIViewController , UIGestureRecognizerDelegate{
         super.viewDidLoad()
         coverImage.image = video.image
         titleLabel.text = video.title
+        titleBar.title = video.title
         descriptionText.text = video.desc
         playButton.isUserInteractionEnabled = true
          let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(playTapped))
