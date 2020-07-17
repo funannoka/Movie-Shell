@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+
 
 class RegisterViewController: UIViewController {
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorReportLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +24,17 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func registerButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "registerToHome", sender: self)
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    self.errorReportLabel.text = e.localizedDescription //change to pop up
+                } else {
+                    self.performSegue(withIdentifier: "registerToHome", sender: self)
+
+                }
+            }
+        }
+        
         
     }
     

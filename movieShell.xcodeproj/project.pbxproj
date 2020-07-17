@@ -38,7 +38,6 @@
 		AA7BF33A24B80D070047253C /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF33924B80D070047253C /* Media.swift */; };
 		AA7BF34024B888D00047253C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA7BF33F24B888D00047253C /* README.md */; };
 		AA7BF34424B9B6CF0047253C /* MediaDescrptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */; };
-		AA7BF34824B9D9E10047253C /* MediaFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF34724B9D9E10047253C /* MediaFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,7 +75,6 @@
 		AA7BF33924B80D070047253C /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		AA7BF33F24B888D00047253C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDescrptionView.swift; sourceTree = "<group>"; };
-		AA7BF34724B9D9E10047253C /* MediaFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFooterView.swift; sourceTree = "<group>"; };
 		E444B3E54A1DB60830F49A8D /* Pods-movieShell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieShell.release.xcconfig"; path = "Target Support Files/Pods-movieShell/Pods-movieShell.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,22 +136,21 @@
 		AA7BF31624B6F8140047253C /* movieShell */ = {
 			isa = PBXGroup;
 			children = (
-				AA7BF31724B6F8140047253C /* AppDelegate.swift */,
-				AA7BF31924B6F8140047253C /* SceneDelegate.swift */,
+				AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */,
+				AA31D95524BBA9C3000BC0C4 /* LandingViewController.swift */,
+				AA31D95124BBA94E000BC0C4 /* LoginViewController.swift */,
+				AA31D95324BBA96B000BC0C4 /* RegisterViewController.swift */,
 				AA7BF33324B7102A0047253C /* HomeScreenController.swift */,
 				AA7BF33124B70FD40047253C /* SearchScreenController.swift */,
+				AA7BF31724B6F8140047253C /* AppDelegate.swift */,
+				AA7BF31924B6F8140047253C /* SceneDelegate.swift */,
 				AA7BF33724B80B090047253C /* MediaCell.swift */,
 				AA7BF33924B80D070047253C /* Media.swift */,
 				AA7BF31F24B6F8140047253C /* Main.storyboard */,
 				AA7BF32224B6F8170047253C /* Assets.xcassets */,
 				AA7BF32424B6F8170047253C /* LaunchScreen.storyboard */,
 				AA7BF32724B6F8170047253C /* Info.plist */,
-				AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */,
-				AA7BF34724B9D9E10047253C /* MediaFooterView.swift */,
 				AA423BDD24BB2031004367B3 /* GoogleService-Info.plist */,
-				AA31D95124BBA94E000BC0C4 /* LoginViewController.swift */,
-				AA31D95324BBA96B000BC0C4 /* RegisterViewController.swift */,
-				AA31D95524BBA9C3000BC0C4 /* LandingViewController.swift */,
 			);
 			path = movieShell;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				AA31D95624BBA9C3000BC0C4 /* LandingViewController.swift in Sources */,
 				AA7BF34424B9B6CF0047253C /* MediaDescrptionView.swift in Sources */,
 				AA7BF33224B70FD40047253C /* SearchScreenController.swift in Sources */,
-				AA7BF34824B9D9E10047253C /* MediaFooterView.swift in Sources */,
 				AA7BF31824B6F8140047253C /* AppDelegate.swift in Sources */,
 				AA7BF33A24B80D070047253C /* Media.swift in Sources */,
 				AA7BF33824B80B090047253C /* MediaCell.swift in Sources */,

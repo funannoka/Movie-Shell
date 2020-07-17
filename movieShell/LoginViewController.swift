@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var reportLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +24,17 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "loginToHome", sender: self)
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+                guard let strongSelf = self else { return }
+                if let e = error {
+                    strongSelf.reportLabel.text = e.localizedDescription //change to pop up
+                } else {
+                    strongSelf.performSegue(withIdentifier: "loginToHome", sender: strongSelf)
+
+                }
+            }
+        }
     }
     
 
