@@ -6,12 +6,38 @@
 //  Copyright © 2020 Funa Nnoka. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
+import FirebaseAuth
+import Firebase
 
-class LandingViewController: UIViewController {
+struct LandingView: View {
+    var body: some View {
+        VStack{
+        Text("movie shell")
+            .foregroundColor(.init( red: 0.290, green: 2.110, blue: 1.890, opacity: 1))
+            .font(Font.custom("black", size: 60))
+            .shadow(color: .gray, radius: 2, x: -2, y: -2)
+            .frame(height: 350)
+            Spacer()
+           // Button(action: T##() -> Void, label: T##() -> PrimitiveButtonStyleConfiguration.Label)
+        }
+    }
+}
+
+struct LandingView_Previews: PreviewProvider {
+    static var previews: some View {
+        LandingView()
+    }
+}
+
+
+class LandingViewController: UIHostingController<LandingView> {
 
     @IBOutlet weak var titleLabel: UILabel!
    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder,rootView: LandingView());
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,3 +57,15 @@ class LandingViewController: UIViewController {
     
     
 }
+
+//class ChildHostingController2: UIHostingController<LandingView> {
+//
+//    required init?(coder: NSCoder) {
+//        super.init(coder: coder,rootView: LandingView());
+//    }
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//       // navigationItem.hidesBackButton = true
+//    }
+//}
