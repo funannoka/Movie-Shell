@@ -10,7 +10,6 @@
 		3D3C8FCA827455BA620CCE0A /* Pods_movieShell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09E4A6BA1EB47ABB109465A /* Pods_movieShell.framework */; };
 		AA31D95224BBA94E000BC0C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D95124BBA94E000BC0C4 /* LoginViewController.swift */; };
 		AA31D95424BBA96B000BC0C4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D95324BBA96B000BC0C4 /* RegisterViewController.swift */; };
-		AA31D95624BBA9C3000BC0C4 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31D95524BBA9C3000BC0C4 /* LandingViewController.swift */; };
 		AA423BCE24BAF862004367B3 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BBF24BAF861004367B3 /* 2.mp4 */; };
 		AA423BCF24BAF862004367B3 /* 15.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BC024BAF861004367B3 /* 15.mp4 */; };
 		AA423BD024BAF862004367B3 /* 10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AA423BC124BAF861004367B3 /* 10.mp4 */; };
@@ -50,7 +49,6 @@
 		A09E4A6BA1EB47ABB109465A /* Pods_movieShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA31D95124BBA94E000BC0C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AA31D95324BBA96B000BC0C4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		AA31D95524BBA9C3000BC0C4 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		AA423BBF24BAF861004367B3 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 2.mp4; path = ../videos/2.mp4; sourceTree = "<group>"; };
 		AA423BC024BAF861004367B3 /* 15.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 15.mp4; path = ../videos/15.mp4; sourceTree = "<group>"; };
 		AA423BC124BAF861004367B3 /* 10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 10.mp4; path = ../videos/10.mp4; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */,
-				AA31D95524BBA9C3000BC0C4 /* LandingViewController.swift */,
 				AA31D95124BBA94E000BC0C4 /* LoginViewController.swift */,
 				AA31D95324BBA96B000BC0C4 /* RegisterViewController.swift */,
 				AA7BF33324B7102A0047253C /* HomeScreenController.swift */,
@@ -313,7 +310,6 @@
 				AA94D96D24C2F61700DDD0EB /* AccountRow.swift in Sources */,
 				AA31D95224BBA94E000BC0C4 /* LoginViewController.swift in Sources */,
 				AA31D95424BBA96B000BC0C4 /* RegisterViewController.swift in Sources */,
-				AA31D95624BBA9C3000BC0C4 /* LandingViewController.swift in Sources */,
 				AA7BF34424B9B6CF0047253C /* MediaDescrptionView.swift in Sources */,
 				AA7BF33224B70FD40047253C /* SearchScreenController.swift in Sources */,
 				AA94D97324C3406500DDD0EB /* LandingView.swift in Sources */,

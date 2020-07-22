@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dJi-io-l02">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3468" y="18"/>
+            <point key="canvasLocation" x="3371" y="18"/>
         </scene>
         <!--ACCOUNT-->
         <scene sceneID="XA5-nV-M5K">
@@ -187,7 +187,7 @@
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iej-Mf-7Hk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3247.826086956522" y="570.6521739130435"/>
+            <point key="canvasLocation" x="2529" y="469"/>
         </scene>
         <!--Movie Description-->
         <scene sceneID="Wgd-Le-azz">
@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Utm-px-J1K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3675" y="-638"/>
+            <point key="canvasLocation" x="3629" y="-739"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="IE4-VC-wt9">
@@ -303,7 +303,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bI9-k6-HdU" kind="show" id="VB4-tR-sPe"/>
+                                    <segue destination="bI9-k6-HdU" kind="show" identifier="landingToLogin" id="VB4-tR-sPe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-hX-HZw">
@@ -314,7 +314,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aIW-qp-LJW" kind="show" id="unI-Kp-EKV"/>
+                                    <segue destination="aIW-qp-LJW" kind="show" identifier="landingToReegister" id="unI-Kp-EKV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="movie shell" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="45" translatesAutoresizingMaskIntoConstraints="NO" id="nik-cY-5bB">
@@ -331,9 +331,6 @@
                         <viewLayoutGuide key="safeArea" id="8Ig-Rz-EoR"/>
                     </view>
                     <navigationItem key="navigationItem" id="HGf-l2-pSC"/>
-                    <connections>
-                        <outlet property="titleLabel" destination="nik-cY-5bB" id="OHX-h5-3ix"/>
-                    </connections>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2R-R7-QDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -559,7 +556,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rhe-0c-hnx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1591" y="256"/>
+            <point key="canvasLocation" x="-1622" y="327"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
