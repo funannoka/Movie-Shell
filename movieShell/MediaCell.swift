@@ -30,7 +30,6 @@ class MediaCell: UITableViewCell {
         
         
         return video
-        
     }
     
 

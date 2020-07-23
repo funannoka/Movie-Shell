@@ -24,8 +24,6 @@ class LandingViewController: UIViewController {
             }
             charIndex += 1
         }
-        
-
         // Do any additional setup after loading the view.
     }
     

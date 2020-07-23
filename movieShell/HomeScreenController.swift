@@ -22,7 +22,6 @@ class HomeScreenController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
        // setUpFooter()
-        
     }
     
     
