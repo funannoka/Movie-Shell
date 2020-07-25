@@ -429,37 +429,37 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bbW-cc-zED">
                                 <rect key="frame" x="0.0" y="239" width="414" height="280"/>
-                                <color key="backgroundColor" red="0.1137254902" green="0.82745098039999998" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="LzF-9t-dCI"/>
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" red="0.60834214949999998" green="0.26037798610000001" blue="0.1816872641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListViewCell" id="jvO-Db-lhP" customClass="ListViewCell" customModule="movieShell" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="374" height="114"/>
+                                        <rect key="frame" x="20" y="55.333332061767578" width="374" height="130.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jvO-Db-lhP" id="2GD-7Q-Nvr">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="114"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="130.33332824707031"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="center" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uve-Pt-T2L">
-                                                    <rect key="frame" x="20" y="11" width="354" height="92"/>
+                                                    <rect key="frame" x="20" y="10.999999999999993" width="354" height="108.33333333333331"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VzS-BF-Sw3">
-                                                            <rect key="frame" x="0.0" y="10.333333333333336" width="50" height="71.333333333333314"/>
+                                                            <rect key="frame" x="0.0" y="10.333333333333336" width="50" height="87.666666666666657"/>
                                                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="oQP-ER-rhI"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="sg9-x0-WNc">
-                                                            <rect key="frame" x="55" y="37.333333333333336" width="43.666666666666657" height="17.333333333333336"/>
+                                                            <rect key="frame" x="55" y="45.666666666666664" width="43.666666666666657" height="17.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPc-px-cca">
-                                                            <rect key="frame" x="103.66666666666667" y="0.6666666666666643" width="250.33333333333331" height="90.666666666666686"/>
+                                                            <rect key="frame" x="103.66666666666667" y="0.6666666666666643" width="250.33333333333331" height="107"/>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
@@ -681,7 +681,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oga-Ld-wRw">
                                 <rect key="frame" x="0.0" y="615" width="414" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.30980392156862746" green="0.54117647058823526" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -692,7 +693,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-hX-HZw">
                                 <rect key="frame" x="0.0" y="674" width="414" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.30980392156862746" green="0.54117647058823526" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <state key="normal" title="REGISTER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -704,7 +706,7 @@
                                 <rect key="frame" x="67" y="213" width="280" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
-                                <color key="textColor" red="0.11372549019607843" green="0.82745098039215681" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.2470588235" green="0.2666666667" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-2" height="-2"/>
