@@ -21,9 +21,6 @@ class AccountListCell: UICollectionViewCell {
         if titleLabel != nil {
             titleLabel.text = account.title
         }
-    //      videoTitleView.isUserInteractionEnabled = true
-    //      let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
-    //        videoTitleView.addGestureRecognizer(tapRecognizer)
     }
     
 }

@@ -38,10 +38,9 @@
 		AA7BF33A24B80D070047253C /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF33924B80D070047253C /* Media.swift */; };
 		AA7BF34024B888D00047253C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA7BF33F24B888D00047253C /* README.md */; };
 		AA7BF34424B9B6CF0047253C /* MediaDescrptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */; };
-		AA94D97B24C9239800DDD0EB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94D97A24C9239800DDD0EB /* AccountViewController.swift */; };
-		AA94D97D24C92A8000DDD0EB /* AccountListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94D97C24C92A8000DDD0EB /* AccountListCell.swift */; };
+		AA8DF19624CB3526006322CF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8DF19524CB3526006322CF /* ListViewController.swift */; };
 		AA94D97F24C92CB900DDD0EB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94D97E24C92CB900DDD0EB /* Account.swift */; };
-		AA94D98124C9AFE800DDD0EB /* AccountListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94D98024C9AFE800DDD0EB /* AccountListController.swift */; };
+		AACC278624CBEADC0083CD40 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC278524CBEADC0083CD40 /* ListViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,10 +78,9 @@
 		AA7BF33924B80D070047253C /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		AA7BF33F24B888D00047253C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDescrptionView.swift; sourceTree = "<group>"; };
-		AA94D97A24C9239800DDD0EB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		AA94D97C24C92A8000DDD0EB /* AccountListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListCell.swift; sourceTree = "<group>"; };
+		AA8DF19524CB3526006322CF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		AA94D97E24C92CB900DDD0EB /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		AA94D98024C9AFE800DDD0EB /* AccountListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountListController.swift; sourceTree = "<group>"; };
+		AACC278524CBEADC0083CD40 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		E444B3E54A1DB60830F49A8D /* Pods-movieShell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieShell.release.xcconfig"; path = "Target Support Files/Pods-movieShell/Pods-movieShell.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +142,6 @@
 		AA7BF31624B6F8140047253C /* movieShell */ = {
 			isa = PBXGroup;
 			children = (
-				AA94D98024C9AFE800DDD0EB /* AccountListController.swift */,
 				AA7BF34324B9B6CF0047253C /* MediaDescrptionView.swift */,
 				AA31D95524BBA9C3000BC0C4 /* LandingViewController.swift */,
 				AA31D95124BBA94E000BC0C4 /* LoginViewController.swift */,
@@ -160,9 +157,9 @@
 				AA7BF32424B6F8170047253C /* LaunchScreen.storyboard */,
 				AA7BF32724B6F8170047253C /* Info.plist */,
 				AA423BDD24BB2031004367B3 /* GoogleService-Info.plist */,
-				AA94D97A24C9239800DDD0EB /* AccountViewController.swift */,
-				AA94D97C24C92A8000DDD0EB /* AccountListCell.swift */,
 				AA94D97E24C92CB900DDD0EB /* Account.swift */,
+				AA8DF19524CB3526006322CF /* ListViewController.swift */,
+				AACC278524CBEADC0083CD40 /* ListViewCell.swift */,
 			);
 			path = movieShell;
 			sourceTree = "<group>";
@@ -308,17 +305,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA31D95224BBA94E000BC0C4 /* LoginViewController.swift in Sources */,
-				AA94D97D24C92A8000DDD0EB /* AccountListCell.swift in Sources */,
 				AA31D95424BBA96B000BC0C4 /* RegisterViewController.swift in Sources */,
-				AA94D97B24C9239800DDD0EB /* AccountViewController.swift in Sources */,
+				AACC278624CBEADC0083CD40 /* ListViewCell.swift in Sources */,
 				AA31D95624BBA9C3000BC0C4 /* LandingViewController.swift in Sources */,
 				AA7BF34424B9B6CF0047253C /* MediaDescrptionView.swift in Sources */,
 				AA7BF33224B70FD40047253C /* SearchScreenController.swift in Sources */,
 				AA7BF31824B6F8140047253C /* AppDelegate.swift in Sources */,
+				AA8DF19624CB3526006322CF /* ListViewController.swift in Sources */,
 				AA7BF33A24B80D070047253C /* Media.swift in Sources */,
 				AA7BF33824B80B090047253C /* MediaCell.swift in Sources */,
 				AA7BF33424B7102A0047253C /* HomeScreenController.swift in Sources */,
-				AA94D98124C9AFE800DDD0EB /* AccountListController.swift in Sources */,
 				AA7BF31A24B6F8140047253C /* SceneDelegate.swift in Sources */,
 				AA94D97F24C92CB900DDD0EB /* Account.swift in Sources */,
 			);

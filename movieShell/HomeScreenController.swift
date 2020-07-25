@@ -11,13 +11,14 @@ import Firebase
 
 class HomeScreenController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
    
     var videos: [Video] = []
     var tappedVideo = Video(image: UIImage(), title: "", desc: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "SHELL"
+        navigationItem.hidesBackButton = true
         videos = createArray()
         tableView.delegate = self
         tableView.dataSource = self

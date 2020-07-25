@@ -9,6 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "AccountListCell"
 
+@available(iOS 14.0, *)
 class AccountViewController: UIViewController {
     
 
@@ -23,17 +24,12 @@ class AccountViewController: UIViewController {
         accountItems = createList()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(AccountListCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        
-        
-        //collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-       // var config = UICollectionLayoutListConfiguration(appearance:.insetGrouped)
+        collectionView!.register(AccountListCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        let config = UICollectionLayoutListConfiguration(appearance:.insetGrouped)
        // config.backgroundColor = .systemPurple
-       // collectionView.collectionViewLayout =UICollectionViewCompositionalLayout.list(using: config)
+        let layout = UICollectionViewCompositionalLayout.list(using: config)
+        collectionView.collectionViewLayout = layout
      
-       // let configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-       // let layout = UICollectionViewCompositionalLayout.list(using: configuration)
     }
     
     
@@ -58,6 +54,7 @@ class AccountViewController: UIViewController {
     
 }
 
+@available(iOS 14.0, *)
 extension AccountViewController:  UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
 
