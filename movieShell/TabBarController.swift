@@ -1,19 +1,18 @@
 //
-//  SearchScreenController.swift
+//  TabBarController.swift
 //  movieShell
 //
-//  Created by Funa Nnoka on 7/9/20.
+//  Created by Funa Nnoka on 7/26/20.
 //  Copyright © 2020 Funa Nnoka. All rights reserved.
 //
 
 import UIKit
 
-class SearchScreenController: UIViewController {
+class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // title = "SHELL"
-        navigationItem.hidesBackButton = true
+
         // Do any additional setup after loading the view.
     }
     
@@ -23,10 +22,6 @@ class SearchScreenController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
     
     /*
     // MARK: - Navigation

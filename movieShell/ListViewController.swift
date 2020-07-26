@@ -21,7 +21,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         //title = "SHELL"
         //navigationItem.leftItemsSupplementBackButton = true
-        navigationItem.hidesBackButton = true
+       // navigationItem.hidesBackButton = true
         accountItems = createList()
         tableView.delegate = self
         tableView.dataSource = self
@@ -31,6 +31,17 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ListViewCell")
      
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     
     @IBAction func signOutPressed(_ sender: UIButton) {
         do {
@@ -47,14 +58,18 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let gear = UIImage(systemName:"gear")
         let person = UIImage(systemName:"person.fill")
         let question = UIImage(systemName:"questionmark.circle")
+        let info = UIImage(systemName: "info.circle")
         
-        let acc1 = Account(image: gear ?? #imageLiteral(resourceName: "first"), title: "App Settings", subTitle: "")
+        let acc1 = Account(image: gear ?? #imageLiteral(resourceName: "first"), title: "Settings", subTitle: "")
         let acc2 = Account(image: person ?? #imageLiteral(resourceName: "first"), title: "Account", subTitle: "")
         let acc3 = Account(image: question ?? #imageLiteral(resourceName: "first"), title: "Help", subTitle: "")
+        let acc4 = Account(image: info ?? #imageLiteral(resourceName: "first"), title: "About", subTitle: "")
         
         tempList.append(acc1)
         tempList.append(acc2)
         tempList.append(acc3)
+        tempList.append(acc4)
+
 
         return tempList
     }

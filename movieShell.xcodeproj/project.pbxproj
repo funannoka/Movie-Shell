@@ -41,6 +41,7 @@
 		AA8DF19624CB3526006322CF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8DF19524CB3526006322CF /* ListViewController.swift */; };
 		AA94D97F24C92CB900DDD0EB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94D97E24C92CB900DDD0EB /* Account.swift */; };
 		AACC278624CBEADC0083CD40 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC278524CBEADC0083CD40 /* ListViewCell.swift */; };
+		AACC278824CDF0290083CD40 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC278724CDF0290083CD40 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		AA8DF19524CB3526006322CF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		AA94D97E24C92CB900DDD0EB /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		AACC278524CBEADC0083CD40 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		AACC278724CDF0290083CD40 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E444B3E54A1DB60830F49A8D /* Pods-movieShell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieShell.release.xcconfig"; path = "Target Support Files/Pods-movieShell/Pods-movieShell.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +162,7 @@
 				AA94D97E24C92CB900DDD0EB /* Account.swift */,
 				AA8DF19524CB3526006322CF /* ListViewController.swift */,
 				AACC278524CBEADC0083CD40 /* ListViewCell.swift */,
+				AACC278724CDF0290083CD40 /* TabBarController.swift */,
 			);
 			path = movieShell;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				AA7BF33A24B80D070047253C /* Media.swift in Sources */,
 				AA7BF33824B80B090047253C /* MediaCell.swift in Sources */,
 				AA7BF33424B7102A0047253C /* HomeScreenController.swift in Sources */,
+				AACC278824CDF0290083CD40 /* TabBarController.swift in Sources */,
 				AA7BF31A24B6F8140047253C /* SceneDelegate.swift in Sources */,
 				AA94D97F24C92CB900DDD0EB /* Account.swift in Sources */,
 			);
@@ -468,6 +472,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.funannoka.movieShell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -487,6 +492,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.funannoka.movieShell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
