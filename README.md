@@ -4,10 +4,13 @@
 
 ![alt text](media/FirstImplementation.gif)
 ![alt text](media/ThirdImplementation.gif)
+![alt text](media/searchViewImplementation.gif)
 ![alt text](media/shot1.png)
 ![alt text](media/shot9.png)
 ![alt text](media/shot3.png)
 ![alt text](media/shot8.png)
+![alt text](media/shot10.png)
+![alt text](media/shot11.png)
 ![alt text](media/shot2.png)
 ![alt text](media/shot6.png)
 ![alt text](media/shot4.png)

@@ -21,6 +21,7 @@ class TabBarController: UITabBarController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+
     
     
     /*
