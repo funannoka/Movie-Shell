@@ -4,7 +4,7 @@
 
 ![alt text](media/FirstImplementation.gif)
 ![alt text](media/ThirdImplementation.gif)
-![alt text](media/searchViewImplementation.gif)
+![alt text](media/searchImplementation.gif)
 ![alt text](media/shot1.png)
 ![alt text](media/shot9.png)
 ![alt text](media/shot3.png)
