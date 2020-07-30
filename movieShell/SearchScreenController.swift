@@ -115,16 +115,16 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
         for item in self.realData {
             if (item.title.lowercased().contains(searchBar.text!.lowercased())) {
                 self.videos.append(item)
+
             }
         }
-        
+
         if (searchBar.text!.isEmpty) {
             self.videos = self.realData
         }
-        
         self.searchCollectionView.reloadData()
     }
-    
+
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         self.videos.removeAll()
@@ -135,8 +135,39 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = true
-    //            searchActive = true
-    //            searchCollectionView.reloadData()
+ 
+    }
+    
+//    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+//        //searchActive = false //Local variable used to manipulate your cells
+//        self.videos.removeAll()
+//        for item in self.realData {
+//            if (item.title.lowercased().contains(searchBar.text!.lowercased())) {
+//                self.videos.append(item)
+//
+//            }
+//        }
+//
+//        if (searchBar.text!.isEmpty) {
+//            self.videos = self.realData
+//        }
+//        self.searchCollectionView.reloadData()
+//    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.videos.removeAll()
+        for item in self.realData {
+            if (item.title.lowercased().contains(searchBar.text!.lowercased())) {
+                self.videos.append(item)
+
+            }
+        }
+
+        if (searchBar.text!.isEmpty) {
+            self.videos = self.realData
+        }
+        self.searchCollectionView.reloadData()
+
     }
 
 }
@@ -148,6 +179,7 @@ extension SearchScreenController: UICollectionViewDelegateFlowLayout {
             height: self.view.frame.width/2)
     }
     
+    //custom dimensions searchbar/collectionView header
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: 414, height: 44 + 40)
     }
