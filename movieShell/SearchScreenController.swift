@@ -22,6 +22,7 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
         realData = videos
         searchCollectionView.delegate = self
         searchCollectionView.dataSource = self
+        hideKeyboardWhenTappedAround()
         //navigationItem.hidesBackButton = true
     }
     
@@ -126,6 +127,7 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
        // searchBar.showsCancelButton = true
+        searchBar.endEditing(true)
         self.videos.removeAll()
         for item in self.realData {
             if (item.title.lowercased().contains(searchBar.text!.lowercased())) {
@@ -142,6 +144,7 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
         self.videos.removeAll()
         self.videos = self.realData
         self.searchCollectionView.reloadSections([1])
@@ -201,6 +204,14 @@ extension SearchScreenController: UICollectionViewDelegateFlowLayout {
 
         return section == 0 ? CGSize(width: collectionView.frame.width, height: 44 + 40) : CGSize(width: collectionView.frame.width, height: 0)
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        if section == 1 {
+//          return UIEdgeInsets(top: 7, left: 7, bottom: 7, right: 7)
+//        }
+//        return UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7)
+//    }
+//
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 //        return 10
