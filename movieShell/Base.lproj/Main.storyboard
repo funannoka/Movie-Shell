@@ -155,9 +155,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bbX-mt-TUu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bbX-mt-TUu">
+                                <rect key="frame" x="7" y="0.0" width="400" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yqt-Ut-2ky">
                                     <size key="itemSize" width="187" height="290"/>
@@ -205,11 +204,11 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SearchBar" id="Blq-ty-Z4o" customClass="SearchBarView" customModule="movieShell" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="x4D-sh-BxN">
-                                            <rect key="frame" x="0.0" y="3" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="3" width="400" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
@@ -226,6 +225,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bbX-mt-TUu" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" constant="-7" id="B7K-Er-i9b"/>
+                            <constraint firstItem="bbX-mt-TUu" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="7" id="DGg-ic-n9m"/>
+                            <constraint firstAttribute="bottom" secondItem="bbX-mt-TUu" secondAttribute="bottom" id="gCo-tG-IbE"/>
+                            <constraint firstItem="bbX-mt-TUu" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="gcw-Gq-InY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="BZH-0J-fd4"/>
                     <connections>
@@ -235,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3867" y="-180"/>
+            <point key="canvasLocation" x="3866.666666666667" y="-180.16304347826087"/>
         </scene>
         <!--Account-Collection View-->
         <scene sceneID="HHk-wX-Ts6">
@@ -491,17 +496,17 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ListViewCell" id="jvO-Db-lhP" customClass="ListViewCell" customModule="movieShell" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="55.333332061767578" width="374" height="251"/>
+                                                <rect key="frame" x="20" y="55.333332061767578" width="374" height="251.33332824707031"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jvO-Db-lhP" id="2GD-7Q-Nvr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="251"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="251.33332824707031"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="center" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uve-Pt-T2L">
-                                                            <rect key="frame" x="20" y="11" width="354" height="229"/>
+                                                            <rect key="frame" x="20" y="11" width="354" height="229.33333333333334"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VzS-BF-Sw3">
-                                                                    <rect key="frame" x="0.0" y="10.333333333333329" width="50" height="208.33333333333337"/>
+                                                                    <rect key="frame" x="0.0" y="10.333333333333329" width="50" height="208.66666666666669"/>
                                                                     <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="oQP-ER-rhI"/>
@@ -514,7 +519,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPc-px-cca">
-                                                                    <rect key="frame" x="103.66666666666667" y="0.6666666666666714" width="250.33333333333331" height="227.66666666666663"/>
+                                                                    <rect key="frame" x="103.66666666666667" y="0.6666666666666714" width="250.33333333333331" height="228"/>
                                                                 </view>
                                                             </subviews>
                                                             <constraints>
@@ -1003,7 +1008,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="OKv-Ao-fi0"/>
-        <segue reference="g29-gR-7XJ"/>
+        <segue reference="cTg-h7-LYz"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>

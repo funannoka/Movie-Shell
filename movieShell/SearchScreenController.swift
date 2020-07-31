@@ -73,9 +73,14 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
         return tempVideos
     }
     
-   
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
     //MARK: UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView,numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return 0
+        }
         return videos.count
         //return number of rows in section
     }
@@ -104,10 +109,20 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
         let searchView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: "UICollectionElementKindSectionHeader", withReuseIdentifier: "SearchBar", for: indexPath)
+        
+        if indexPath.section == 1
+        {
+//            let fakeView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "fakeHeader", for: indexPath)
+//            return fakeView
+            searchView.isHidden = true
+        }
+
         
         return searchView
     }
+    
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
        // searchBar.showsCancelButton = true
@@ -122,14 +137,14 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
         if (searchBar.text!.isEmpty) {
             self.videos = self.realData
         }
-        self.searchCollectionView.reloadData()
+        self.searchCollectionView.reloadSections([1])
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         self.videos.removeAll()
         self.videos = self.realData
-        self.searchCollectionView.reloadData()
+        self.searchCollectionView.reloadSections([1])
     //  self.dismiss(animated: true, completion: nil)
     }
     
@@ -166,24 +181,34 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
         if (searchBar.text!.isEmpty) {
             self.videos = self.realData
         }
-        self.searchCollectionView.reloadData()
+        self.searchCollectionView.reloadSections([1])
 
     }
+    
+    
 
 }
 
 extension SearchScreenController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(
-            width: (self.view.frame.width/3)-7,
-            height: self.view.frame.width/2)
+            width: (collectionView.frame.width/3)-7,
+            height: collectionView.frame.width/2)
     }
     
     //custom dimensions searchbar/collectionView header
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: 414, height: 44 + 40)
-    }
 
+        return section == 0 ? CGSize(width: collectionView.frame.width, height: 44 + 40) : CGSize(width: collectionView.frame.width, height: 0)
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 10
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 10
+//    }
+//
 }
 
 //extension SearchScreenController: UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
