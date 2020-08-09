@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SearchScreenController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
-
+class SearchScreenController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate, TabBarReselectHandling {
+    
     @IBOutlet weak var searchCollectionView: UICollectionView!
     var videos: [Video] = []
     var tappedVideo = Video(image: UIImage(), title: "", desc: "")
@@ -83,17 +83,17 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
             return 0
         }
         return videos.count
-        //return number of rows in section
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = searchCollectionView.dequeueReusableCell(withReuseIdentifier: "searchCollectionCell", for: indexPath) as! SearchCollectionViewCell
+        let cell = searchCollectionView.dequeueReusableCell(withReuseIdentifier: K.searchCellIdentifier, for: indexPath) as! SearchCollectionViewCell
         let video = videos[indexPath.row]
         
         cell.setVideo(video: video)
         
-        return cell      //return your cell
+        return cell      
     }
     
 //MARK: UICollectionViewDelegate
@@ -101,7 +101,7 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
         let cell: SearchCollectionViewCell = collectionView.cellForItem(at: indexPath as IndexPath) as! SearchCollectionViewCell
         self.tappedVideo = cell.getVideo()
         
-        performSegue(withIdentifier: "searchToMovieSeque", sender: self)
+        performSegue(withIdentifier: K.searchToMovieSegue, sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -111,17 +111,17 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let searchView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: "UICollectionElementKindSectionHeader", withReuseIdentifier: "SearchBar", for: indexPath)
+        let searchView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: "UICollectionElementKindSectionHeader", withReuseIdentifier: K.searchBarIdentifier, for: indexPath)
         
         if indexPath.section == 1
         {
-//            let fakeView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "fakeHeader", for: indexPath)
-//            return fakeView
             searchView.isHidden = true
         }
-
-        
         return searchView
+    }
+    
+    func handleReselect() {
+        self.searchCollectionView?.setContentOffset(.zero, animated: true)
     }
     
     
@@ -157,7 +157,7 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
 //    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-//        //searchActive = false //Local variable used to manipulate your cells
+//        //searchActive = false
 //        self.videos.removeAll()
 //        for item in self.realData {
 //            if (item.title.lowercased().contains(searchBar.text!.lowercased())) {
@@ -171,6 +171,7 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
 //        }
 //        self.searchCollectionView.reloadData()
 //    }
+
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.videos.removeAll()
@@ -222,50 +223,3 @@ extension SearchScreenController: UICollectionViewDelegateFlowLayout {
 //
 }
 
-//extension SearchScreenController: UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
-//    //MARK: Search Bar
-//        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//            searchActive = false
-//            self.dismiss(animated: true, completion: nil)
-//        }
-//
-//        func updateSearchResults(for searchController: UISearchController)
-//        {
-//            let searchString = searchController.searchBar.text
-//
-//            filtered = videos.filter({ (video) -> Bool in
-//                let countryVid: Video = video as Video
-//                let countryText: NSString = countryVid.title as NSString
-//
-//                return (countryText.range(of: searchString!, options: NSString.CompareOptions.caseInsensitive).location) != NSNotFound
-//            })
-//
-//            searchCollectionView.reloadData()
-//
-//        }
-//
-//        func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-//            searchActive = true
-//            searchCollectionView.reloadData()
-//        }
-//
-//
-//        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//            searchActive = false
-//            searchCollectionView.reloadData()
-//        }
-//
-//        func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
-//            if !searchActive {
-//                searchActive = true
-//                searchCollectionView.reloadData()
-//            }
-//
-//            searchController.searchBar.resignFirstResponder()
-//        }
-//
-//
-//
-//
-//
-//}

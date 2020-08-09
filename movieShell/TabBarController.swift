@@ -8,11 +8,15 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+protocol TabBarReselectHandling {
+    func handleReselect()
+}
+
+class TabBarController: UITabBarController, UITabBarControllerDelegate  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -23,15 +27,19 @@ class TabBarController: UITabBarController {
     }
 
     
-    
-    /*
-    // MARK: - Navigation
+    func tabBarController(
+        _ tabBarController: UITabBarController,
+        shouldSelect viewController: UIViewController
+    ) -> Bool {
+        if tabBarController.selectedViewController === viewController,
+            let handler = viewController as? TabBarReselectHandling {
+            // NOTE: viewController in line above might be a UINavigationController,
+            // in which case you need to access its contents
+            handler.handleReselect()
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        return true
     }
-    */
 
 }
+

@@ -17,7 +17,7 @@ class HomeScreenController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "SHELL"
+        title = K.homeTitle
        // navigationItem.hidesBackButton = true
         videos = createArray()
         tableView.delegate = self
@@ -84,7 +84,7 @@ class HomeScreenController: UIViewController {
     
     
     @IBAction func watchThisTapped(_ sender: UIButton) {
-       // performSegue(withIdentifier: "toMovieSeque", sender: self)
+       // performSegue(withIdentifier: "homeToMovie", sender: self)
 
     }
     
@@ -96,7 +96,7 @@ class HomeScreenController: UIViewController {
 //
 //    @objc func viewTapped(sender: UIView) {
 //       let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//       let nextViewController = storyBoard.instantiateViewController(withIdentifier: "toMovieSeque") as! MediaDescriptionView
+//       let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homeToMovie") as! MediaDescriptionView
 //       self.present(nextViewController, animated:true, completion:nil)
 //        print("image tapped")
 //    }
@@ -104,7 +104,11 @@ class HomeScreenController: UIViewController {
     
 }
 
-extension HomeScreenController:  UITableViewDataSource, UITableViewDelegate {
+extension HomeScreenController:  UITableViewDataSource, UITableViewDelegate , TabBarReselectHandling {
+    func handleReselect() {
+        tableView?.setContentOffset(.zero, animated: true)
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videos.count
@@ -114,7 +118,7 @@ extension HomeScreenController:  UITableViewDataSource, UITableViewDelegate {
         
         
         let video = videos[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MediaCell", for: indexPath) as! MediaCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.mediaCellIdentifier, for: indexPath) as! MediaCell
         cell.setVideo(video: video)
 
         
@@ -125,7 +129,7 @@ extension HomeScreenController:  UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath) as! MediaCell
         self.tappedVideo = cell.getVideo()
         
-        performSegue(withIdentifier: "toMovieSeque", sender: self)
+        performSegue(withIdentifier: K.homeToMovieSegue, sender: self)
         
     }
     

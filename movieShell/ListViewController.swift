@@ -26,6 +26,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        tableView.separatorColor = UIColor.black
        // tableView.backgroundColor = UIColor.darkGray
         
        // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ListViewCell")
@@ -85,7 +87,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let account = accountItems[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as! ListViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.accoutListCellIdentifier, for: indexPath) as! ListViewCell
         cell.accessoryType = .disclosureIndicator
         cell.setList(account: account)
         //cell.addLayoutGuide()
@@ -96,7 +98,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
       //  let cell = tableView.cellForRow(at: indexPath) as! ListViewCell
       //  self.tappedVideo = cell.getVideo()
 
-        performSegue(withIdentifier: "accountToInfo", sender: self)
+        performSegue(withIdentifier: K.accountInfoSegue, sender: self)
         
     }
     

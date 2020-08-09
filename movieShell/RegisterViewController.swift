@@ -16,10 +16,13 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorReportLabel: UILabel!
+    @IBOutlet weak var emailView: UIView!
+    @IBOutlet weak var passwordView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        emailView.layer.cornerRadius = emailView.frame.size.height / 2
+        passwordView.layer.cornerRadius = passwordView.frame.size.height / 2
         // Do any additional setup after loading the view.
     }
 
@@ -29,7 +32,7 @@ class RegisterViewController: UIViewController {
                 if let e = error {
                     self.errorReportLabel.text = e.localizedDescription //change to pop up
                 } else {
-                    self.performSegue(withIdentifier: "registerToHome", sender: self)
+                    self.performSegue(withIdentifier: K.registerHomeSegue, sender: self)
 
                 }
             }
