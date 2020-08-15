@@ -22,6 +22,16 @@ struct K {
     static let searchBarIdentifier = "SearchBar"
     static let accoutListCellIdentifier = "ListViewCell"
     static let homeTitle = "SHELL"
+    
+    
+    struct FStore {
+        static let collectionName = "movies"
+        static let idField = "id"
+        static let imageField = "image"
+        static let titleField = "title"
+        static let videoField = "video"
+        static let descriptionField = "desc"
+    }
 }
 
  

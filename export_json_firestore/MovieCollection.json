@@ -1,0 +1,89 @@
+{
+    
+   "movies": [
+      {
+        "id": "M000",
+        "title": "Fun Home",
+        "image": "1.jpg",
+        "video": "1.mp4",
+        "desc": "A movie about having fun at your home, no matter where it may be."
+      },
+      {
+        "id": "M001",
+        "title": "Sad Man",
+        "image": "2.jpg",
+        "video": "2.mp4",
+        "desc": "A movie about a local sad man."
+      },
+      {
+        "id": "M002",
+        "title": "Weep For Mercy",
+        "image": "3.jpg",
+        "video": "3.mp4",
+        "desc": "A Woman weeps for mercy, begging for grace and compassion through some trying times."
+      },
+      {
+        "id": "M003",
+        "title": "Alone In Paradise",
+        "image": "4.jpg",
+        "video": "4.mp4",
+        "desc": "A movie about the two ends of a spectrum, dealing with poverty in the most luxurious city."
+      },
+      {
+        "id": "M004",
+        "title": "Death By Peanut",
+        "image": "5.jpg",
+        "video": "5.mp4",
+        "desc": "Death knows no limitations, the irony of death and its unassuming demeanor"
+      },
+      {
+        "id": "M005",
+        "title": "Hopeless",
+        "image": "6.jpg",
+        "video": "6.mp4",
+        "desc": "When all hope is lost, who and where do you turn to?"
+      },
+      {
+        "id": "M006",
+        "title": "Need A Friend",
+        "image": "7.jpg",
+        "video": "7.mp4",
+        "desc": "Loneliness is the 21st century."
+      },
+      {
+        "id": "M007",
+        "title": "Thirst",
+        "image": "8.jpg",
+        "video": "8.mp4",
+        "desc": "A story of hope and bounty."
+      },
+      {
+        "id": "M008",
+        "title": "A desperate Man",
+        "image": "9.jpg",
+        "video": "9.mp4",
+        "desc": "Poverty in America."
+      },
+      {
+        "id": "M009",
+        "title": "Pissed Off",
+        "image": "10.jpg",
+        "video": "10.mp4",
+        "desc": "A teenage nightmare"
+      },
+      {
+        "id": "M0010",
+        "title": "Deeds & Dooms",
+        "image": "11.jpg",
+        "video": "11.mp4",
+        "desc": "Good deeds and bad luck"
+      },
+      {
+        "id": "M0011",
+        "title": "Humanity",
+        "image": "12.jpg",
+        "video": "12.mp4",
+        "desc": "Humanity, nature and how its all connects."
+      }
+    ]
+}

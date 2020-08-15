@@ -11,6 +11,7 @@ target 'movieShell' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
 
 
   # add pods for any other desired Firebase products

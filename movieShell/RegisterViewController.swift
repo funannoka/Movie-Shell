@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         emailView.layer.cornerRadius = emailView.frame.size.height / 2
-        passwordView.layer.cornerRadius = passwordView.frame.size.height / 2
+        passwordView.layer.cornerRadius = passwordView.frame.size.height / 2 
         // Do any additional setup after loading the view.
     }
 

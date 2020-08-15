@@ -14,16 +14,17 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
    // var videoTitle = ""
     var desc = ""
-    
+    var mp4 = ""
     func setVideo(video: Video) {
         coverImageView.image = video.image
         titleLabel.text = video.title
         desc = video.desc
+        mp4 = video.mp4
     }
     
     func getVideo() -> Video {
         
-        let video = Video(image: coverImageView.image ?? UIImage(), title: titleLabel.text ?? "" , desc: desc )
+        let video = Video(image: coverImageView.image ?? UIImage(), title: titleLabel.text ?? "" , desc: desc, mp4: mp4 )
         
         return video
     }

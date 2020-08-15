@@ -7,22 +7,25 @@
 //
 
 import UIKit
+import Firebase
 
 class SearchScreenController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate, TabBarReselectHandling {
     
     @IBOutlet weak var searchCollectionView: UICollectionView!
     var videos: [Video] = []
-    var tappedVideo = Video(image: UIImage(), title: "", desc: "")
-    
+    var tappedVideo = Video(image: UIImage(), title: "", desc: "", mp4: "")
     var realData: [Video] = []
+    let db = Firestore.firestore()
+    let storage = Storage.storage()
+    //let placeholderImage = #imageLiteral(resourceName: "1")
+    var storageRef : StorageReference = Storage.storage().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        videos = createArray()
-        realData = videos
         searchCollectionView.delegate = self
         searchCollectionView.dataSource = self
         hideKeyboardWhenTappedAround()
+        createArray()
         //navigationItem.hidesBackButton = true
     }
     
@@ -41,37 +44,79 @@ class SearchScreenController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    func createArray() -> [Video] {
-        var tempVideos: [Video] = []
+//    func createArray() -> [Video] {
+//        var tempVideos: [Video] = []
+//
+//        let video1 = Video(image: #imageLiteral(resourceName: "1"), title: "FUN HOME", desc: "This is the movie description about a movie that never existed but could, lol!\n Starring: My Cat and her attitude", mp4: "1.mp4")
+//        let video2 = Video(image: #imageLiteral(resourceName: "2"), title: "SAD MAN", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video3 = Video(image: #imageLiteral(resourceName: "3"), title: "WEEP FOR MERCY", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video4 = Video(image: #imageLiteral(resourceName: "4"), title: "ALONE IN PARADISE", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video5 = Video(image: #imageLiteral(resourceName: "5"), title: "DEATH BY PEANUT", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video6 = Video(image: #imageLiteral(resourceName: "6"), title: "HOPELESS", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video7 = Video(image: #imageLiteral(resourceName: "7"), title: "NEED A FRIEND", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video8 = Video(image: #imageLiteral(resourceName: "8"), title: "THIRST", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video9 = Video(image: #imageLiteral(resourceName: "9"), title: "A DESPERATE MAN", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video10 = Video(image: #imageLiteral(resourceName: "10"), title: "PISSED OFF", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video11 = Video(image: #imageLiteral(resourceName: "11"), title: "DEEDS & DOOMS", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//        let video12 = Video(image: #imageLiteral(resourceName: "12"), title: "HUMANITY", desc: "This is the movie description about a movie that never existed but could, lol!", mp4: "1.mp4")
+//
+//        tempVideos.append(video1)
+//        tempVideos.append(video2)
+//        tempVideos.append(video3)
+//        tempVideos.append(video4)
+//        tempVideos.append(video5)
+//        tempVideos.append(video6)
+//        tempVideos.append(video7)
+//        tempVideos.append(video8)
+//        tempVideos.append(video9)
+//        tempVideos.append(video10)
+//        tempVideos.append(video11)
+//        tempVideos.append(video12)
+//
+//
+//        return tempVideos
+//    }
+//
+    
+    func createArray(){
+        //var tempVideos: [Video] = []
+        let imageRef = storageRef.child("images")
+        //let videoRef = storageRef.child("videos")
+        // UIImageView in your ViewController
+       // let imageView: UIImageView = UIImageView()
         
-        let video1 = Video(image: #imageLiteral(resourceName: "1"), title: "FUN HOME", desc: "This is the movie description about a movie that never existed but could, lol!\n Starring: My Cat and her attitude")
-        let video2 = Video(image: #imageLiteral(resourceName: "2"), title: "SAD MAN", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video3 = Video(image: #imageLiteral(resourceName: "3"), title: "WEEP FOR MERCY", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video4 = Video(image: #imageLiteral(resourceName: "4"), title: "ALONE IN PARADISE", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video5 = Video(image: #imageLiteral(resourceName: "5"), title: "DEATH BY PEANUT", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video6 = Video(image: #imageLiteral(resourceName: "6"), title: "HOPELESS", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video7 = Video(image: #imageLiteral(resourceName: "7"), title: "NEED A FRIEND", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video8 = Video(image: #imageLiteral(resourceName: "8"), title: "THIRST", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video9 = Video(image: #imageLiteral(resourceName: "9"), title: "A DESPERATE MAN", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video10 = Video(image: #imageLiteral(resourceName: "10"), title: "PISSED OFF", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video11 = Video(image: #imageLiteral(resourceName: "11"), title: "DEEDS & DOOMS", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video12 = Video(image: #imageLiteral(resourceName: "12"), title: "HUMANITY", desc: "This is the movie description about a movie that never existed but could, lol!")
-        
-        tempVideos.append(video1)
-        tempVideos.append(video2)
-        tempVideos.append(video3)
-        tempVideos.append(video4)
-        tempVideos.append(video5)
-        tempVideos.append(video6)
-        tempVideos.append(video7)
-        tempVideos.append(video8)
-        tempVideos.append(video9)
-        tempVideos.append(video10)
-        tempVideos.append(video11)
-        tempVideos.append(video12)
+        db.collection(K.FStore.collectionName).getDocuments
+        { (querySnapshot, error) in
+            if let e = error {
+                print("There was an issue retrieving data from Firestore. \(e.localizedDescription)")
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let movieTitle = data[K.FStore.titleField] as? String, let movieCoverName = data[K.FStore.imageField] as? String, let movieDescription = data[K.FStore.descriptionField] as? String, let mp4Name = data[K.FStore.videoField] as? String {
+                            let movieCoverRef = imageRef.child(movieCoverName)
+                            movieCoverRef.getData(maxSize: 6 * 1024 * 1024) { (cdata, error) in
+                                if let err = error {
+                                    print("There was an issue retrieving data from Firebase Storage.  \(err.localizedDescription)")
+                                } else {
+                                    let movieCover = UIImage(data: cdata!)
+                                    let video = Video(image: movieCover!, title: movieTitle, desc: movieDescription, mp4: mp4Name)
+                                    self.videos.append(video)
+                                    self.realData.append(video)
 
-        
-        return tempVideos
+                                    DispatchQueue.main.async {
+                                        self.searchCollectionView.reloadSections([1])
+                                    }
+                                    print(video.image, video.title, video.desc)
+                                }
+                                }
+                            
+                            }
+                        
+                        }
+                    }
+                }
+            }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

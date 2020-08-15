@@ -8,35 +8,42 @@
 
 import UIKit
 import Firebase
+//import FirebaseUI
+
 
 class HomeScreenController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
    
     var videos: [Video] = []
-    var tappedVideo = Video(image: UIImage(), title: "", desc: "")
+    var tappedVideo = Video(image: UIImage(), title: "", desc: "", mp4: "")
+    let db = Firestore.firestore()
+    let storage = Storage.storage()
+    //let placeholderImage = #imageLiteral(resourceName: "1")
+    var storageRef : StorageReference = Storage.storage().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = K.homeTitle
-       // navigationItem.hidesBackButton = true
-        videos = createArray()
+       // videos = createArray()
         tableView.delegate = self
         tableView.dataSource = self
-        //let vc =  SearchScreenController()
-        //vc.videos = videos
-       // setUpFooter()
+        title = K.homeTitle
+        createArray()
+
+       // navigationItem.hidesBackButton = true
+        
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        tableView.reloadData()
+//
+//    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
             navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
- //  override func viewWillAppear(_ animated: Bool) {
- //        super.viewWillAppear(animated)
- //        navigationController?.setNavigationBarHidden(true, animated: animated)
-//    }
- //
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -49,37 +56,43 @@ class HomeScreenController: UIViewController {
        }
     }
     
-    func createArray() -> [Video] {
-        var tempVideos: [Video] = []
+    func createArray(){
+        //var tempVideos: [Video] = []
+        let imageRef = storageRef.child("images")
+        //let videoRef = storageRef.child("videos")
+        // UIImageView in your ViewController
+       // let imageView: UIImageView = UIImageView()
         
-        let video1 = Video(image: #imageLiteral(resourceName: "1"), title: "FUN HOME", desc: "This is the movie description about a movie that never existed but could, lol!\n Starring: My Cat and her attitude")
-        let video2 = Video(image: #imageLiteral(resourceName: "2"), title: "SAD MAN", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video3 = Video(image: #imageLiteral(resourceName: "3"), title: "WEEP FOR MERCY", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video4 = Video(image: #imageLiteral(resourceName: "4"), title: "ALONE IN PARADISE", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video5 = Video(image: #imageLiteral(resourceName: "5"), title: "DEATH BY PEANUT", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video6 = Video(image: #imageLiteral(resourceName: "6"), title: "HOPELESS", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video7 = Video(image: #imageLiteral(resourceName: "7"), title: "NEED A FRIEND", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video8 = Video(image: #imageLiteral(resourceName: "8"), title: "THIRST", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video9 = Video(image: #imageLiteral(resourceName: "9"), title: "A DESPERATE MAN", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video10 = Video(image: #imageLiteral(resourceName: "10"), title: "PISSED OFF", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video11 = Video(image: #imageLiteral(resourceName: "11"), title: "DEEDS & DOOMS", desc: "This is the movie description about a movie that never existed but could, lol!")
-        let video12 = Video(image: #imageLiteral(resourceName: "12"), title: "HUMANITY", desc: "This is the movie description about a movie that never existed but could, lol!")
-        
-        tempVideos.append(video1)
-        tempVideos.append(video2)
-        tempVideos.append(video3)
-        tempVideos.append(video4)
-        tempVideos.append(video5)
-        tempVideos.append(video6)
-        tempVideos.append(video7)
-        tempVideos.append(video8)
-        tempVideos.append(video9)
-        tempVideos.append(video10)
-        tempVideos.append(video11)
-        tempVideos.append(video12)
-
-        
-        return tempVideos
+        db.collection(K.FStore.collectionName).getDocuments
+        { (querySnapshot, error) in
+            if let e = error {
+                print("There was an issue retrieving data from Firestore. \(e.localizedDescription)")
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let movieTitle = data[K.FStore.titleField] as? String, let movieCoverName = data[K.FStore.imageField] as? String, let movieDescription = data[K.FStore.descriptionField] as? String, let mp4Name = data[K.FStore.videoField] as? String {
+                            let movieCoverRef = imageRef.child(movieCoverName)
+                            movieCoverRef.getData(maxSize: 6 * 1024 * 1024) { (cdata, error) in
+                                if let err = error {
+                                    print("There was an issue retrieving data from Firebase Storage.  \(err.localizedDescription)")
+                                } else {
+                                    let movieCover = UIImage(data: cdata!)
+                                    let video = Video(image: movieCover!, title: movieTitle, desc: movieDescription, mp4: mp4Name)
+                                    self.videos.append(video)
+                                    DispatchQueue.main.async {
+                                        self.tableView.reloadData()
+                                    }
+                                    print(video.image, video.title, video.desc)
+                                }
+                                }
+                            
+                            }
+                        
+                        }
+                    }
+                }
+            }
     }
     
     
